@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+
+    background-color: rgb(33, 33, 33);
+    color: azure;
+
+    overflow-x: hidden;
+}
+
+input {
+    border-radius: 0.375rem;
+    border: 1px solid rgba(55, 65, 81, 1);
+    outline: 0;
+    background-color: transparent;
+    color: rgba(243, 244, 246, 1);
+}
+
+input:focus {
+    border-color: rgb(242, 146, 47);
+}
+
+#auth-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    width: 320px;
+    padding: 2rem;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.auth-title {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    border-bottom: 1px solid orange;
+    width: fit-content;
+    padding-bottom: 10px;
+    margin: auto;
+    color: azure;
+}
+
+.auth-form {
+    margin-top: 1.5rem;
+}
+
+.input-group {
+    margin: 0.25rem 0;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    color: rgba(156, 163, 175, 1);
+    margin-bottom: 4px;
+}
+
+.input-group input {
+    width: 100%;
+    border-radius: 0.375rem;
+    border: 1px solid rgba(55, 65, 81, 1);
+    outline: 0;
+    background-color: transparent;
+    padding: 0.75rem 1rem;
+    color: rgba(243, 244, 246, 1);
+}
+
+.input-group input:focus {
+    border-color: orangered;
+}
+
+
+.alt-auth a {
+    color: rgba(243, 244, 246, 1);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+.alt-auth a:hover {
+    text-decoration: underline orange;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background-color: orange;
+    padding: 0.75rem;
+    text-align: center;
+    color: azure;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+a{
+    text-decoration-line: none;
+}
+
+button:hover {
+    background-color: rgba(255, 166, 0, 0.8);
+
+}
+
+
+.line {
+    height: 1px;
+    flex: 1 1 0%;
+    background-color: rgba(55, 65, 81, 1);
+}
+
+.alt-auth {
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: rgba(156, 163, 175, 1);
+    margin-top: 20px;
+}
+
+.alert {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.home-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

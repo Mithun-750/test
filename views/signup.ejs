@@ -1,0 +1,36 @@
+
+    <div class="form-container">
+        <p class="auth-title">Sign up</p>
+        <% if (req.query.signupError) { %>
+            <div class="alert alert-danger" role="alert">
+                <% if (req.query.errorMessage==='username' ) { %>
+                    Please provide a valid username.
+                    <% } else if (req.query.errorMessage==='password' ) { %>
+                        Password must be at least 3 characters long.
+                        <% } else if (req.query.errorMessage==='confirmPassword' ) { %>
+                            Password confirmation does not match password.
+                            <% } else { %>
+                                Invalid credentials.
+                                <% } %>
+            </div>
+            <% } %>
+                <form class="auth-form" method="post" action="/signup">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" placeholder="">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="">
+                    </div>
+                    <div class="input-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="">
+                    </div>
+                    <button type="submit" class="auth-btn">Sign in</button> <!-- Submit button added -->
+                </form>
+
+                <p class="alt-auth">Already have an account?
+                    <a rel="noopener noreferrer" href="/login" class="">Log in</a>
+                </p>
+    </div>

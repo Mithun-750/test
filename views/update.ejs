@@ -1,0 +1,31 @@
+<div class="form-container">
+    <p class="auth-title">Update Details</p>
+    <% if (req.query.updateError) { %>
+        <div class="alert " role="alert">
+            <% if (req.query.errorMessage==='username' ) { %>
+                Please provide a valid username.
+                <% } else if (req.query.errorMessage==='password' ) { %>
+                    Password must be at least 3 characters long.
+                    <% } else if (req.query.errorMessage==='confirmPassword' ) { %>
+                        Password confirmation does not match password.
+                        <% } else { %>
+                            Invalid credentials.
+                            <% } %>
+        </div>
+        <% } %>
+            <form class="auth-form" method="POST" action="/update">
+                <div class="input-group">
+                    <label for="newUsername">New Username</label>
+                    <input type="text" name="newUsername" id="username" placeholder="">
+                </div>
+                <div class="input-group">
+                    <label for="newPassword">New Password</label>
+                    <input type="password" name="newPassword" id="password" placeholder="">
+                </div>
+                <div class="input-group">
+                    <label for="confirmNewPassword">Confirm New Password</label>
+                    <input type="password" name="confirmNewPassword" id="newConfirmPassword" placeholder="">
+                </div>
+                <button type="submit" class="auth-btn">Update</button>
+            </form>
+</div>

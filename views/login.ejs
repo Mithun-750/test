@@ -1,0 +1,24 @@
+
+    <div class="form-container">
+        <p class="auth-title">Login</p>
+        <% if (req.query.loginError) { %>
+            <div class="alert alert-danger" role="alert">
+                Invalid username or password.
+            </div>
+            <% } %>
+                <form class="auth-form" method="POST" action="/login">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" placeholder="">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="">
+                    </div>
+                    <button type="submit" class="auth-btn">Log in</button> <!-- Submit button added -->
+                </form>
+
+                <p class="alt-auth">Don't have an account?
+                    <a rel="noopener noreferrer" href="/signup" class="">Sign up</a>
+                </p>
+    </div>
